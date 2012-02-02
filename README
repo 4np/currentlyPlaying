@@ -3,8 +3,8 @@ by Jeroen Wesbeek <work at osx.eu>
 Released under Apache License, Version 2.0
 -----------------------------------------------------------------
 
-Usage:	osascript path/to/currentlyPlaying.scpt
-	osascript path/to/currentlyPlaying.scpt /path/to/my/image.tiff
+Usage:	osascript path/to/currentlyPlaying.applescript
+	osascript path/to/currentlyPlaying.applescript /path/to/my/image.tiff
 
 The script will return the currently playing track(s) in iTunes
 and / or Spotify in the format:
@@ -38,7 +38,7 @@ This script is particularly useful when combined and used with
 Geektool. You could create a script geeklet, executing the
 curentlyPlaying script every 10 seconds to print the currently
 playing track(s):
-	osascript path/to/currentlyPlaying.scpt
+	osascript path/to/currentlyPlaying.applescript
 
 You could then create an image geeklet, reading the image file
 from ~/albumArt.tiff (or: /Users/yourname/albumArt.tiff) every
@@ -48,3 +48,14 @@ You can tweak the time, but at the moment I don't see any
 performance issues with the 10 second interval and the updates
 seem quite responsive to the changing of the tracks as it now
 only has a 10 second delay (at max).
+
+Note:
+-----
+To put the script on github, I saved it as text instead of script.
+It does not seem to matter execution wise, but it might be a speed
+improvement to save it as script (scpt) before using it in your
+setup. To do so, just open the script (click it, or type
+'open currentlyPlaying.applescript' in the terminal) and save it
+as script (file -> save as -> choose script) and you will be have
+the file currentlyPlaying.scpt which you can use the same way as
+mentioned above.
