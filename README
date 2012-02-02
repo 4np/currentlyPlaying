@@ -21,7 +21,7 @@ string will be returned.
 
 In addition to returning information on the currently playing
 track, the script will also store the album artwork in a file. By
-default this is ~/albumArt.tiff, but but specifying an argument
+default this is ~/albumArt.tiff, but by specifying an argument
 you are able to change this default path.
 
 When nothing is playing, or a track does not have any artwork
@@ -30,17 +30,18 @@ pixel.
 
 The script is optimized to only update the artwork when the track
 has changed. To accomplish this it uses a temporary cache file in
-/tmp/albumArt.txt
+/tmp/albumArt.txt which contains the id of the current track or
+the player state.
 
 Geek Tool:
 ----------
 This script is particularly useful when combined and used with
-Geektool. You could create a script geeklet, executing the
+Geektool. You could create a script 'geeklet', executing the
 curentlyPlaying script every 10 seconds to print the currently
 playing track(s):
 	osascript path/to/currentlyPlaying.scpt
 
-You could then create an image geeklet, reading the image file
+You could then create an image 'geeklet', reading the image file
 from ~/albumArt.tiff (or: /Users/yourname/albumArt.tiff) every
 10 seconds.
 
