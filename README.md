@@ -1,22 +1,21 @@
 # currentlyPlaying
 
+The script will return the currently playing track(s) in iTunes
+and / or Spotify in the format: song by artist (e.g. *Juanita Kiteless To Dream Of Love by Underworld*).
+
 ## Usage
 
-Usage:	osascript path/to/currentlyPlaying.scpt
-
 ```
+	osascript path/to/currentlyPlaying.scpt
 	osascript path/to/currentlyPlaying.scpt /path/to/my/image.tiff
 ```
 
-The script will return the currently playing track(s) in iTunes
-and / or Spotify in the format:
-	song by artist
+In the rare case that both iTunes as well as Spotify will be playing (for example iTunes is streaming to an Airport Express while Spotify is playing locally) the output will be multiline:
 
-In the rare case that both programs will be playing (for example
-iTunes is streaming to an Airport Express while Spotify is
-playing locally) the output will be multiline:
+```
 	song by artist (Spotify)
 	song by artist (iTunes)
+```
 
 When nothing is playing, or when the players are paused, an empty
 string will be returned.
@@ -60,6 +59,8 @@ You can tweak the time, but at the moment I don't see any
 performance issues with the 10 second interval and the updates
 seem quite responsive to the changing of the tracks as it now
 only has a 10 second delay (at max).
+
+![desktop](https://dl.dropboxusercontent.com/s/ns249z23hlz29jq/screenshot-desktop.png?token_hash=AAGM5GEHbuhLsJ_z7eWFu-yv9mkLCAsWh7xkO_DInVdB2g&dl=1)
 
 # Copyright
    Copyright 2011 Jeroen Wesbeek
