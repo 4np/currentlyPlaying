@@ -35,9 +35,11 @@ has changed. To accomplish this it uses a temporary cache file in
 the player state.
 
 ## Skype Mood Message
-In addition, the script will update your skype's mood message (if it is running) with the song information:
+In addition, by default the script will update your skype's mood message (if it is running) with the song information:
 
 ![skype](https://dl.dropboxusercontent.com/s/fscgwlwo40uwmkn/screenshot-skype.png?token_hash=AAGS2Lx2OHKHqe79pxaHr6F8ID5J0XkjyZ5j1pRHnlOPhw&dl=1)
+
+It is possible to disable this by changing [the configuration flag ```useSkype```](https://github.com/4np/currentlyPlaying/blob/master/currentlyPlaying.applescript#L30) to false. To do so, open ```currentlyPlaying.scpt``` in the AppleScript editor (from terminal: ```open currentlyPlaying.scpt```), change ```useSkype``` from ```true``` to ```false``` and save the script.
 
 ## Geek Tool
 This script is particularly useful when combined and used with
